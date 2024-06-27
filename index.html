@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor</title>
+    <style>
+        
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00a878;
+            text-decoration: none;
+        }
+    
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* New: Allow wrapping */
+            align-items: center; /* New: Align items vertically */
+        }
+    
+        nav li {
+            margin-right: 20px;
+        }
+    
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        nav a:hover {
+            color: #00a878;
+        }
+    
+        .btn {
+            background-color: #00a878;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+            vertical-align: middle; /* Aligns the button vertically */
+        }
+    
+        .btn:hover {
+            background-color: #00805b;
+        }
+    
+        .hero {
+            background-image: url('http://i.huffpost.com/gen/1618491/images/o-GIRL-COLLEGE-facebook.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+    
+        .hero-text {
+            text-align: left;
+            max-width: 600px;
+            color: #fff;
+        }
+    
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+    
+        .popular-courses-line,
+        .popular-courses-line2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0 20px;
+        }
+    
+        .course-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 0 auto 40px;
+            max-width: 1200px;
+        }
+    
+        .course-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .course-image {
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .course-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        .course-info {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .course-info h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #00a878;
+        }
+    
+        .course-info p {
+            margin: 0;
+            color: #333;
+        }
+    
+        .author-info {
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .author-info .price {
+            color: #00a878;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    
+        .contact-us {
+            background-color: #fff;
+            padding: 40px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    
+        .contact-us h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #00a878;
+        }
+    
+        .contact-us p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    
+        .contact-us form input,
+        .contact-us form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    
+        .contact-us form input[type="submit"] {
+            background-color: #00a878;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .contact-us form input[type="submit"]:hover {
+            background-color: #00805b;
+        }
+    
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0 20px;
+        }
+    
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+    
+        .footer-section h3 {
+            margin-bottom: 10px;
+            color: lightgreen;
+        }
+    
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+    
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .footer-bottom p {
+            margin: 0;
+        }
+    
+        .social-icons {
+            margin-top: 10px;
+        }
+    
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    
+        @media (max-width: 768px) {
+            .course-box {
+                width: 45%;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .course-box {
+                width: 100%;
+            }
+    
+            .hero {
+                height: 500px;
+            }
+    
+            .hero-text h1 {
+                font-size: 36px;
+            }
+    
+            .hero-text p {
+                font-size: 16px;
+            }
+    
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            nav li {
+                margin-bottom: 10px;
+            }
+        }
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content li {
+    position: relative;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nested dropdown styles */
+
+.nested-dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nested-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nested-dropdown li {
+    position: relative;
+}
+
+.nested-dropdown a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nested-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-trigger:hover + .nested-dropdown {
+    display: block;
+}
+
+.dropdown-content li:hover > .nested-dropdown {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-content li:hover > .nested-dropdown li {
+    display: block;
+}
+
+
+.dropdown-content li:hover > a {
+    background-color: #f1f1f1;
+}
+
+.dropdown-content li:hover > a::after {
+    content: "\25B6";
+    font-size: 12px;
+    margin-left: 10px;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">MENTOR</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Dashboard <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="https://dashboard.udiseplus.gov.in/#/home">School Education Dashboard</a></li>
+                            <li><a href="https://dashboard.aishe.gov.in/hedirectory/#/institutionDirectory">Higher Education Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Scholarships <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" class="dropdown-trigger">After 10th <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown">
+                                    <li><a href="science.html">Science</a></li>
+                                    <li><a href="humanities.html">Humanities</a></li>
+                                    <li><a href="commerce.html">Commerce</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="dropdown-trigger">After 12th <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown">
+                                    <li><a href="./Btech.html">B.Tech.</a></li>
+                                    <li><a href="./ba.html">B.A.</a></li>
+                                    <li><a href="./bcom.html">B.Com.</a></li>
+                                    <li><a href="./bsc.html">B.Sc.</a></li>
+                                    <li><a href="./mbbs.html">MBBS</a></li>
+                                  </ul>
+                            </li>
+                            <li><a href="#" class="dropdown-trigger">Post Graduation <i class="fas fa-chevron-right"></i></a>
+                                <ul class="nested-dropdown">
+                                    <li><a href="mtech.html">M.Tech</a></li>
+                                    <li><a href="mba.html">MBA</a></li>
+                                    <li><a href="msc.html">M.Sc.</a></li>
+                                    <li><a href="pg.html">PG(Doctor)</a></li>
+           
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Entrance Exams <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="jee.html">JEE</a></li>
+                            <li><a href="neet.html">NEET</a></li>
+                            <li><a href="clat.html">CLAT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="about.html" class="btn">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1 style="color: black;font-size: 60px;">Learning Today, <br>Leading Tomorrow</h1>
+            <p style="color: black;font-size: 30px;">We are a dedicated team committed to empowering women through education, particularly in higher studies.</p>
+            <a href="about.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <div class="popular-courses-line">Our Academic Toppers for 23-24</div>
+    <div class="popular-courses-line2">JEE Advanced 2023 Toppers</div>
+    <div class="course-container">
+        <div class="course-box">
+            <div class="course-image" style="background-color: yellow;">
+                <img src="jee1.png" style="width:200px;" alt="Course Image 1">
+            </div>
+            <div class="course-info">
+                <h3>Vavilala Reddy</h3>
+               
+            </div>
+            <div class="author-info">
+               
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="course-image" style="background-color: yellow;">
+                <img src="jee2.png" style="width:200px;" alt="Course Image 2">
+            </div>
+            <div class="course-info">
+                <h3>Nayakanti Naga Bhavya</h3>
+            </div>
+            <div class="author-info">
+               
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="popular-courses-line2">NEET 2023 Toppers</div>
+    <div class="course-container">
+        <div class="course-box">
+            <div class="course-image" style="background-color: yellow;">
+                <img src="neet1.png" style="width:200px;" alt="Course Image 1">
+            </div>
+            <div class="course-info">
+                <h3>Prabanjan J</h3>
+                <p>(AIR 1) - Tamil Nadu</p>
+            </div>
+            <div class="author-info">
+                
+            </div>
+        </div>
+        <div class="course-box">
+            <div class="course-image" style="background-color: yellow;">
+                <img src="neet2.png" style="width:200px;" alt="Course Image 2">
+            </div>
+            <div class="course-info">
+                <h3>Kaustav Bauri*</h3>
+                <p>(AIR 3) - Tamil Nadu</p>
+            </div>
+            <div class="author-info">
+               
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Please fill out the form below and we will get in touch with you shortly.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Learning Resources</h3>
+                <ul>
+                    <li>Best Courses Online</li>
+                    <li>Practice Problems</li>
+                    <li>Board Toppers</li>
+                    <li>FAQ's</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Associating Partner</h3>
+                <ul>
+                    <li>PMINDIA</li>
+                    <li>data.gov.in</li>
+                    <li>Digital India</li>
+                    <li>MyGovt</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>More</h3>
+                <ul>
+                    <li>Mentor For Colleges</li>
+                    <li>Contact Us</li>
+                    <li>Code Of Conduct</li>
+                    <li>User Ranklist</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Usage Policy</h3>
+                <ul>
+                    <li>Privacy policy</li>
+                    <li>Terms</li>
+                    <li>Other Policy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>www.MENTOR.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-medium"></i></a>
+                <a href="#"><i class="fa fa-quora"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
