@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="col1.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header1 {
+            background: linear-gradient(135deg, #ffffe0, #ccae64);
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav1 {
+            background: linear-gradient(135deg, #43a047, #001f3f);
+            color: #000000;
+            padding: 10px;
+        }
+        
+        nav1 a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        nav1 a:hover {
+            color: #f90808;
+        }
+        
+        .about-section {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+        
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .image {
+            flex: 1;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .top-content {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 22px;
+            color: #43a047;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .section {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .team-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f0f0f0;
+        }
+        
+        .team-section h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        
+        .team-member {
+            flex: 0 1 auto;
+            margin: 0 20px;
+            max-width: 300px;
+        }
+        
+        .team-member img {
+            width: 200px; /* Increased width */
+            height: auto;
+            max-height: 300px; /* Increased max-height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .team-member p {
+            margin-top: 10px;
+        }
+        
+        .team-member p:first-of-type {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <h1>MENTOR</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Dashboard <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="https://dashboard.udiseplus.gov.in/#/home">School Education Dashboard</a></li>
+                            <li><a href="https://dashboard.aishe.gov.in/hedirectory/#/institutionDirectory">Higher Education Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown has-dropdown">
+                        <a href="#"><span>Scholarships</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li class="dropdown has-dropdown">
+                                <a href="#"><span>After 10th</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul class="dropdown-menu-right">
+                                    <li><a href="science.html">Science</a></li>
+                                    <li><a href="commerce.html">Commerce</a></li>
+                                    <li><a href="humanities.html">Humanities</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown has-dropdown">
+                                <a href="#"><span>After 12th/Under Graduation</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul class="dropdown-menu-right">
+                                    <li><a href="Btech.html">B.Tech.</a></li>
+                                    <li><a href="ba.html">B.A.</a></li>
+                                    <li><a href="bcom.html">B.Com.</a></li>
+                                    <li><a href="bsc.html">B.Sc.</a></li>
+                                    <li><a href="mbbs.html">MBBS</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown has-dropdown">
+                                <a href="#"><span>Post Graduation</span> <i class="bi bi-chevron-right"></i></a>
+                                <ul class="dropdown-menu-right">
+                                    <li><a href="mtech.html">M.Tech</a></li>
+                                    <li><a href="mba.html">MBA</a></li>
+                                    <li><a href="msc.html">M.Sc.</a></li>
+                                    <li><a href="mbbs.html">PG(Doctor)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html" class="btn-getstarted">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Our mission is to provide support, resources, and opportunities that enable women to thrive academically and professionally.</p>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="top-content">
+            <div class="text-content">
+                <h1>About Mentor</h1>
+                <p>Our website, Mentor, is dedicated to empowering women through education, providing a comprehensive platform for scholarships and competitive exam preparation. Our mission is to support and guide women at various stages of their educational journey, ensuring they have access to the resources and opportunities needed to succeed.</p>
+                <p>We offer personalized mentorship programs, expert advice, and a supportive community to help women overcome challenges and achieve their academic and professional goals. By fostering a culture of learning and growth, we aim to create a brighter future for women everywhere.</p>
+            </div>
+            <div class="image-content">
+                <img src="https://c.ndtvimg.com/2023-11/vqdf8kc_office-generic_625x300_16_November_23.jpeg" alt="Mentor website illustration">
+            </div>
+        </div>
+    
+        <div class="section">
+            <h1>What We Offer</h1>
+            
+            <h4>Scholarships</h4>
+             <p>Our website features an extensive database of scholarships tailored specifically for women at different educational levels:</p>
+            <ul>
+                <li><strong>After 10th Grade:</strong> Scholarships for students interested in pursuing Science, Commerce, and Humanities streams.</li>
+                <li><strong>After 12th/Undergraduate:</strong> Financial aid options for various undergraduate courses including B.Tech, B.A., B.Com, B.Sc., and MBBS.</li>
+                <li><strong>Postgraduate:</strong> Opportunities for advanced studies with scholarships for M.Tech, MBA, M.Sc., and postgraduate medical courses.</li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h1>Competitive Exams</h1>
+            <p>We provide detailed information and resources for various competitive exams, crucial for admission to top institutions and career advancement:</p>
+            <ul>
+                <li><strong>JEE (Joint Entrance Examination):</strong> Comprehensive guides, preparation tips, and success stories to help students excel in this engineering entrance exam.</li>
+                <li><strong>NEET (National Eligibility cum Entrance Test):</strong> Resources and study materials for aspiring medical professionals.</li>
+                <li><strong>UPSC (Union Public Service Commission):</strong> Insights and preparation strategies for civil services aspirants.</li>
+                <li><strong>GATE (Graduate Aptitude Test in Engineering):</strong> Information on exam patterns, preparation tips, and success stories.</li>
+                <li><strong>CLAT (Common Law Admission Test):</strong> Resources for students aiming for a career in law.</li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h1>Academic Toppers</h1>
+            <p>We celebrate and showcase the achievements of academic toppers in various fields. Our "Academic Toppers" section highlights the success stories of students who have excelled in exams like JEE and NEET, providing inspiration and motivation to other students.</p>
+        </div>
+    </div>
+
+    <section class="team-section">
+        <h1>OUR TEAM </h1>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="bhavi.jpg"  alt="Bhavi Jain">
+                <p>Bhavi Jain</p>
+                
+            </div>
+            <div class="team-member">
+                <img src="debby.jpg" alt="Debarjita">
+                <p>Debarjita Bhattacharjee</p>
+               
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Learning Resources</h3>
+                <ul>
+                    <li>Best Courses Online</li>
+                    <li>Practice Problems</li>
+                    <li>Board Toppers</li>
+                    <li>FAQ's</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Associating Partner</h3>
+                <ul>
+                    <li>PMINDIA</li>
+                    <li>data.gov.in</li>
+                    <li>Digital India</li>
+                    <li>MyGovt</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>More</h3>
+                <ul>
+                    <li>Mentor For Colleges</li>
+                    <li>Contact Us</li>
+                    <li>Code Of Conduct</li>
+                    <li>User Ranklist</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Usage Policy</h3>
+                <ul>
+                    <li>Privacy policy</li>
+                    <li>Terms</li>
+                    <li>Other Policy</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>www.MENTOR.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-medium"></i></a>
+                <a href="#"><i class="fa fa-quora"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
